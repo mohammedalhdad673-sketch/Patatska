@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a61e2d">
+  <meta name="description" content="منيو بطاطسكا - اطلب وجبتك المفضلة بسهولة.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none';">
+  <title>منيو بطاطسكا | Patatska</title>
+  <link rel="icon" href="Logo_icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="nav shell" aria-label="التنقل الرئيسي">
+      <a class="brand" href="index.html" aria-label="العودة للرئيسية">
+        <img src="Patatska_logo.png" alt="شعار بطاطسكا">
+        <span>
+          <strong>بطاطسكا</strong>
+          <small>بطاطس بطريقتنا</small>
+        </span>
+      </a>
+      <div class="nav-actions">
+        <a class="call-link" href="tel:01208367773" aria-label="اتصل ببطاطسكا">اتصل بنا</a>
+      </div>
+    </nav>
+
+    <div class="hero-content shell">
+      <p class="eyebrow">طازة • لذيذة • على ذوقك</p>
+      <h1>الطعم اللي يستاهل<br><span>مكان في سلتك</span></h1>
+      <p class="hero-copy">اختار وجبتك، حدّد الحجم والإضافات، وسيب علينا باقي الحكاية.</p>
+      <a class="hero-cta" href="#menu-content">استكشف المنيو <span aria-hidden="true">←</span></a>
+      <div class="hero-note"><span>✦</span> جميع الأسعار بالجنيه المصري</div>
+    </div>
+  </header>
+
+  <main id="menu-content">
+    <section class="menu-intro shell" aria-labelledby="menu-title">
+      <div>
+        <p class="section-kicker">منيو بطاطسكا</p>
+        <h2 id="menu-title">اختار أكلك المفضل</h2>
+        <p>كل صنف له تفاصيله وأسعاره واضحة، والسلة تحفظ اختياراتك أثناء التصفح.</p>
+      </div>
+      <div class="menu-stats" aria-label="معلومات المنيو">
+        <span>🍟 <b id="items-total">0</b> صنف</span>
+        <span>⚡ تحضير سريع</span>
+      </div>
+    </section>
+
+    <section class="menu-controls" aria-label="البحث والتصنيفات">
+      <div class="shell controls-wrap">
+        <label class="search-box" for="menu-search">
+          <span aria-hidden="true">⌕</span>
+          <input id="menu-search" type="search" placeholder="بتدور على بروست، برجر، فرايز..." autocomplete="off">
+          <button id="clear-search" type="button" aria-label="مسح البحث" hidden>×</button>
+        </label>
+        <div class="category-tabs" id="category-tabs" role="tablist" aria-label="أقسام المنيو"></div>
+      </div>
+    </section>
+
+    <section class="menu-section shell" aria-live="polite">
+      <div class="results-heading">
+        <div>
+          <p class="section-kicker" id="category-label">كل المنيو</p>
+          <h2 id="results-title">كل الاختيارات</h2>
+        </div>
+        <p id="results-count"></p>
+      </div>
+      <div class="menu-grid" id="menu-grid" aria-busy="true"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">🍟</span>
+        <h3>ملقيناش الصنف ده</h3>
+        <p>جرّب اسم مختلف أو ارجع لكل أقسام المنيو.</p>
+        <button class="text-button" id="reset-filters" type="button">عرض كل المنيو</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="location-section shell" aria-labelledby="location-title">
+    <div class="section-head">
+      <p class="section-kicker">زورنا</p>
+      <h2 id="location-title">موقع المطعم على الخريطة</h2>
+      <p>إحنا فى أشمون — الشارع الجديد، بجوار فرع فوري. افتح الخريطة وتعالّا تاكل.</p>
+    </div>
+    <div class="location-grid">
+      <div class="map-frame">
+        <iframe
+         title="موقع مطعم بطاطسكا على خرائط جوجل"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.897074700874!2d30.97433067528488!3d30.296991606561434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458630042d60833%3A0xbea687519dc466c3!2z2KjYt9in2LfYs9mD2Kc!5e0!3m2!1sen!2sus!4v1786982751469!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+       </iframe>
+      </div>
+      <div class="location-info">
+        <div class="info-row">
+          <span class="ic" aria-hidden="true">📍</span>
+          <div>
+            <h4>العنوان</h4>
+            <p>مصر، المنوفية، أشمون — الشارع الجديد، بجوار فرع فوري</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true">📞</span>
+          <div>
+            <h4>اتصل بنا</h4>
+            <a href="tel:01208367773" dir="ltr">01208367773</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true">🕒</span>
+          <div>
+            <h4>ساعات العمل</h4>
+            <ul class="hours-list">
+              <li><span>السبت — الخميس</span><b>١١ ص — ١١ م</b></li>
+              <li><span>الجمعة</span><b>١ م — ١١ م</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="location-actions">
+          <a class="btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=%D8%A8%D8%B7%D8%A7%D8%B7%D8%B3%D9%83%D8%A7%20%D8%A7%D8%B4%D9%85%D9%88%D9%86" target="_blank" rel="noopener noreferrer">اتجاهات للوصول</a>
+          <a class="btn-red" href="https://wa.me/201208367773" target="_blank" rel="noopener noreferrer">اطلب الآن</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="Patatska_logo.png" alt="بطاطسكا">
+        <p>بطاطسكا، منيو متعمل عشان كل لقمة تبقى على مزاجك.</p>
+      </div>
+      <div>
+        <h3>تواصل معنا</h3>
+        <a href="tel:01208367773" dir="ltr">01208367773</a>
+      </div>
+      <div>
+        <h3>اطلب بسرعة</h3>
+        <a href="https://wa.me/201208367773" target="_blank" rel="noopener noreferrer">واتساب بطاطسكا</a>
+        <a href="#top">العودة للأعلى ↑</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="current-year"></span> بطاطسكا. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سلة الطلب" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <p class="section-kicker">طلبك</p>
+        <h2>سلة المشتريات</h2>
+      </div>
+      <button class="icon-button" id="close-cart" type="button" aria-label="إغلاق السلة">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty">
+      <span aria-hidden="true">🛍️</span>
+      <h3>السلة لسه فاضية</h3>
+      <p>أضف وجبتك المفضلة من المنيو.</p>
+    </div>
+    <div class="cart-footer" id="cart-footer" hidden>
+      <div class="cart-total"><span>الإجمالي</span><strong id="cart-total">0 ج.م</strong></div>
+      <a id="order-whatsapp" class="checkout-button" href="https://wa.me/201208367773" target="_blank" rel="noopener noreferrer">إرسال الطلب على واتساب</a>
+    </div>
+  </aside>
+
+  <button class="floating-cart-button" id="floating-cart" type="button" aria-label="فتح السلة" hidden>
+    <span aria-hidden="true">🛍️</span>
+    <span>السلة</span>
+    <b id="floating-cart-count">0</b>
+  </button>
+
+  <section class="item-modal" id="item-modal" role="dialog" aria-modal="true" aria-labelledby="modal-name" hidden>
+    <div class="modal-panel">
+      <button class="modal-close icon-button" id="close-modal" type="button" aria-label="إغلاق التفاصيل">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
